@@ -1,0 +1,52 @@
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+
+{
+  "username" : "1_admin@gmail.com",
+  "password" : "password",
+  "rememberMe" : true
+}
+
+###
+
+POST http://localhost:8080/api/admin/student/transfer
+Content-Type: application/json
+Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxX2FkbWluQGdtYWlsLmNvbSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTYwOTk1MzY3MiwiZXhwIjoxNjQxNDg5NjcyfQ.pcxojNpMDIV4KQc7-GgqIr3dEsGe80v3qhmA9QXLSpc
+
+{
+  "id" : null,
+  "reason" : "Некая причина",
+  "student" : {
+    "id" : "8",
+    "email" : "voron@ya.ru",
+    "firstName" : "Антон",
+    "lastName" : "Воронов",
+    "middleName" : "Александрович",
+    "enabled" : "true",
+    "studentClass" : {
+      "id" : "2",
+      "classLevel" : {
+        "id" : "1",
+        "numberClass" : "ПЕРВЫЙ"
+      },
+      "symbolClass" : "Б"
+    }
+  },
+  "fromClass" : {
+    "id" : "2",
+    "classLevel" : {
+      "id" : "1",
+      "numberClass" : "ПЕРВЫЙ"
+    },
+    "symbolClass" : "Б"
+  },
+  "toClass" : {"id" : "1",
+    "classLevel" : {
+      "id" : "1",
+      "numberClass" : "ПЕРВЫЙ"
+    },
+    "symbolClass" : "А"
+  },
+  "transferDate" : null
+}
+

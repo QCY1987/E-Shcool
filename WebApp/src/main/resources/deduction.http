@@ -1,0 +1,45 @@
+POST http://localhost:8080/api/auth/login/
+Content-Type: application/json
+
+{
+  "username" : "1_admin@gmail.com",
+  "password" : "password",
+  "rememberMe" : true
+}
+
+###
+
+POST http://localhost:8080/api/admin/student/deduction
+Content-Type: application/json
+Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxX2FkbWluQGdtYWlsLmNvbSIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTYxMDEzMjkzMiwiZXhwIjoxNjQxNjY4OTMyfQ.iF74agDJyPGCJz_w7KxyVtrKI3khKbjV9ykt1LM3gd0
+
+{
+  "id" : null,
+  "reason" : "Некая причина отчисления",
+  "student" : {
+    "id" : "10",
+    "email" : "vorona@ya.ru",
+    "firstName" : "Анна",
+    "lastName" : "Воронова",
+    "middleName" : "Владимировна",
+    "enabled" : "true",
+    "studentClass" : {
+      "id" : "1",
+      "classLevel" : {
+        "id" : "2",
+        "numberClass" : "ПЕРВЫЙ"
+      },
+      "symbolClass" : "А"
+    }
+  },
+  "fromStudentClass" : {
+    "id" : "1",
+    "classLevel" : {
+      "id" : "2",
+      "numberClass" : "ПЕРВЫЙ"
+    },
+    "symbolClass" : "А"
+  },
+  "transferDate" : null
+}
+
